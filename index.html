@@ -1,57 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEDGuideHub</title>
     <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             padding: 20px;
             max-width: 800px;
             margin: auto;
-            background-color: #f4f4f9;
+            background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
             color: #333;
+            transition: background-color 0.3s ease;
         }
+
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: #3a506b;
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
-        h2, h3 {
-            color: #34495e;
+
+        h2,
+        h3 {
+            color: #4a6572;
+            margin-top: 20px;
+            border-bottom: 2px solid #d9e2ec;
+            padding-bottom: 5px;
         }
+
         a {
-            color: #3498db;
+            color: #2e86ab;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
+
         a:hover {
+            color: #1c5f85;
             text-decoration: underline;
         }
-        div {
-            margin: 10px 0;
-        }
-        .resource-list {
-            border: 1px solid #ddd;
+
+        nav {
+            background-color: #b4c8d1;
+            color: #fff;
             padding: 10px;
-            background-color: #fff;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
         }
+
+        nav a {
+            color: #3a506b;
+            margin: 0 10px;
+        }
+
+        .resource-list {
+            border: 1px solid #cdd2d6;
+            padding: 15px;
+            background-color: #f7fafc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .resource-list:hover {
+            transform: translateY(-5px);
+        }
+
         img {
             display: block;
             margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #2e86ab;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #1c5f85;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #b4c8d1;
+            color: #3a506b;
+            margin-top: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #2e86ab;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
-    
-    <h1>Here is a free list of all GED resources!</h1>
+    <nav>
+        <a href="#resources">Resources</a>
+        <a href="#books">Books</a>
+        <a href="#flashcards">Flashcards</a>
+    </nav>
+
+    <h1>Free GED Resources</h1>
 
     <img src="point-down.gif" alt="Pointing down">
 
-    <div class="resource-list">
+    <div id="resources" class="resource-list">
+        <h2>Online Resources</h2>
         <div>
-            Starting with the GOAT: <a href="https://www.getsummath.com/" target="_blank">Get Sum Math</a>
+            Starting with the GOAT🐐: <a href="https://www.getsummath.com/" target="_blank">Get Sum Math</a>
         </div>
         <div>
             LIGHT & SALT LEARNING (Math): <a href="https://sites.google.com/view/gedmathcrashcourse/home?authuser=0" target="_blank">LIGHT & SALT LEARNING</a>
@@ -64,9 +160,8 @@
         </div>
     </div>
 
-    <h2>Books:</h2>
-
-    <div class="resource-list">
+    <div id="books" class="resource-list">
+        <h2>Books</h2>
         <div>
             <a href="GED Test Prep 2022-2023 2 Practice Tests + Proven Strategies + Online.pdf" target="_blank">Kaplan GED Test Prep Plus</a>
         </div>
@@ -81,13 +176,36 @@
         </div>
     </div>
 
-    <h2>Free Flashcards and Questions</h2>
-    
-    <div class="resource-list">
-        <a href="https://drive.google.com/drive/folders/1-40sIf6Cz9jAfuUsz3oUv-C0CTiRSbxP?usp=drive_link" target="_blank">Sauce</a>
+    <div id="flashcards" class="resource-list">
+        <h2>Free Flashcards and Questions</h2>
+        <div>
+            <a href="https://drive.google.com/drive/folders/1-40sIf6Cz9jAfuUsz3oUv-C0CTiRSbxP?usp=drive_link" target="_blank">Sauce</a>
+        </div>
     </div>
 
-    <h3>Remember to use code 50off or save50 for the practice test</h3>
+    <h3>Use code "50off" or "save50" for the practice test discounts</h3>
 
+    <button class="back-to-top" aria-label="Back to Top">↑</button>
+
+
+    <script>
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
+
 </html>

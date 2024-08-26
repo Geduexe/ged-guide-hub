@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEDGuideHub</title>
+    <title>Free GED Resources | GEDGuideHub - Online Courses, Books, Flashcards</title>
+    <meta name="description" content="Discover free GED resources including online courses, books, flashcards, and more to help you pass the GED exam.">
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Free GED Resources | GEDGuideHub">
+    <meta property="og:description" content="A collection of free GED resources including courses, books, and flashcards.">
+    <meta property="og:image" content="URL_to_an_image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+
+    <!-- Styles -->
     <style>
         /* Reset CSS */
         * {
@@ -31,8 +40,7 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
-        h2,
-        h3 {
+        h2, h3 {
             color: #4a6572;
             margin-top: 20px;
             border-bottom: 2px solid #d9e2ec;
@@ -131,55 +139,87 @@
             }
         }
     </style>
+
+    <!-- Structured Data Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://www.getsummath.com/",
+                "name": "Get Sum Math"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://sites.google.com/view/gedmathcrashcourse/home",
+                "name": "LIGHT & SALT LEARNING"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "https://www.passtheged.org/home",
+                "name": "PassTheGed"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "url": "https://www.youtube.com/@TestPrepChampions",
+                "name": "Test Prep Champions"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
-    <nav>
+    <nav aria-label="Primary Navigation">
         <a href="#resources">Resources</a>
         <a href="#books">Books</a>
         <a href="#flashcards">Flashcards</a>
     </nav>
 
-    <h1>Free GED Resources</h1>
-
-    <img src="point-down.gif" alt="Pointing down">
+    <h1>Free GED Resources and Study Guides</h1>
 
     <div id="resources" class="resource-list">
         <h2>Online Resources</h2>
         <div>
-            Starting with the GOAT🐐: <a href="https://www.getsummath.com/" target="_blank">Get Sum Math</a>
+            Starting with the GOAT🐐: <a href="https://www.getsummath.com/" target="_blank" rel="noopener noreferrer">Get Sum Math</a>
         </div>
         <div>
-            LIGHT & SALT LEARNING (Math): <a href="https://sites.google.com/view/gedmathcrashcourse/home?authuser=0" target="_blank">LIGHT & SALT LEARNING</a>
+            LIGHT & SALT LEARNING (Math): <a href="https://sites.google.com/view/gedmathcrashcourse/home?authuser=0" target="_blank" rel="noopener noreferrer">LIGHT & SALT LEARNING</a>
         </div>
         <div>
-            PassTheGed: <a href="https://www.passtheged.org/home" target="_blank">PassTheGed</a>
+            PassTheGed: <a href="https://www.passtheged.org/home" target="_blank" rel="noopener noreferrer">PassTheGed</a>
         </div>
         <div>
-            Test Prep Champions: <a href="https://www.youtube.com/@TestPrepChampions" target="_blank">Test Prep Champions</a>
+            Test Prep Champions: <a href="https://www.youtube.com/@TestPrepChampions" target="_blank" rel="noopener noreferrer">Test Prep Champions</a>
         </div>
     </div>
 
     <div id="books" class="resource-list">
         <h2>Books</h2>
         <div>
-            <a href="GED Test Prep 2022-2023 2 Practice Tests + Proven Strategies + Online.pdf" target="_blank">Kaplan GED Test Prep Plus</a>
+            <a href="GED Test Prep 2022-2023 2 Practice Tests + Proven Strategies + Online.pdf" target="_blank" rel="noopener noreferrer">Kaplan GED Test Prep Plus</a>
         </div>
         <div>
-            <a href="Princeton Review GED Test Prep, 2022 Practice Tests + Review Techniques + Online Features (2022).pdf" target="_blank">Princeton Review GED Test Prep</a>
+            <a href="Princeton Review GED Test Prep, 2022 Practice Tests + Review Techniques + Online Features (2022).pdf" target="_blank" rel="noopener noreferrer">Princeton Review GED Test Prep</a>
         </div>
         <div>
-            <a href="GED Mathematical Reasoning Test For Dummies.pdf" target="_blank">GED Mathematical Reasoning Test For Dummies</a>
+            <a href="GED Mathematical Reasoning Test For Dummies.pdf" target="_blank" rel="noopener noreferrer">GED Mathematical Reasoning Test For Dummies</a>
         </div>
         <div>
-            <a href="McGraw-Hill Education Preparation for the GED Test (McGraw Hill Editors).pdf" target="_blank">McGraw-Hill Education Preparation for the GED Test</a>
+            <a href="McGraw-Hill Education Preparation for the GED Test (McGraw Hill Editors).pdf" target="_blank" rel="noopener noreferrer">McGraw-Hill Education Preparation for the GED Test</a>
         </div>
     </div>
 
     <div id="flashcards" class="resource-list">
         <h2>Free Flashcards and Questions</h2>
         <div>
-            <a href="https://drive.google.com/drive/folders/1-40sIf6Cz9jAfuUsz3oUv-C0CTiRSbxP?usp=drive_link" target="_blank">Sauce</a>
+            <a href="https://drive.google.com/drive/folders/1-40sIf6Cz9jAfuUsz3oUv-C0CTiRSbxP?usp=drive_link" target="_blank" rel="noopener noreferrer">Sauce</a>
         </div>
     </div>
 
@@ -187,16 +227,12 @@
 
     <button class="back-to-top" aria-label="Back to Top">↑</button>
 
-
+    <!-- JavaScript for Interactivity -->
     <script>
         const backToTopButton = document.querySelector('.back-to-top');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
+            backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
 
         backToTopButton.addEventListener('click', () => {
